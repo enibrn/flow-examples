@@ -63,7 +63,7 @@ const formatRouteTitle = (route: RouteRecordNormalized) => {
   </v-app>
 </template>
 
-<!-- <style>
+<style>
 @import '@vue-flow/core/dist/style.css';
 @import '@vue-flow/core/dist/theme-default.css';
 @import '@vue-flow/controls/dist/style.css';
@@ -81,4 +81,4 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-</style> -->
+</style>
