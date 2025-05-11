@@ -6,7 +6,7 @@ import { VueFlow, useVueFlow } from '@vue-flow/core'
 import { Background } from '@vue-flow/background'
 import { ControlButton, Controls } from '@vue-flow/controls'
 import { MiniMap } from '@vue-flow/minimap'
-import { initialEdges, initialNodes } from '../../initial-elements.js'
+import { initialEdges, initialNodes } from '../../assets/basic-initial-elements.js'
 
 /**
  * `useVueFlow` provides:
@@ -150,56 +150,5 @@ function toggleDarkMode() {
 </template>
 
 <style scoped>
-.basic-flow.dark {
-  background: #2d3748;
-  color: #FFFFFB;
-}
-
-.basic-flow.dark .vue-flow__node {
-  background: #4a5568;
-  color: #FFFFFB;
-}
-
-.basic-flow.dark .vue-flow__node.selected {
-  background: hsl(0, 0%, 20%);
-  box-shadow: 0 0 0 2px #2563eb;
-}
-
-.basic-flow .vue-flow__controls {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.basic-flow.dark .vue-flow__controls {
-  border: 1px solid #FFFFFB;
-}
-
-.basic-flow .vue-flow__controls .vue-flow__controls-button {
-  border: none;
-  border-right: 1px solid #eee;
-}
-
-.basic-flow .vue-flow__controls .vue-flow__controls-button svg {
-  height: 100%;
-  width: 100%;
-}
-
-.basic-flow.dark .vue-flow__controls .vue-flow__controls-button {
-  background: hsl(0, 0%, 20%);
-  fill: #FFFFFB;
-  border: none;
-}
-
-.basic-flow.dark .vue-flow__controls .vue-flow__controls-button:hover {
-  background: hsl(0, 0%, 30%);
-}
-
-.basic-flow.dark .vue-flow__edge-textbg {
-  fill: #292524;
-}
-
-.basic-flow.dark .vue-flow__edge-text {
-  fill: #FFFFFB;
-}
+@import '../../assets/basic-style.css';
 </style>
