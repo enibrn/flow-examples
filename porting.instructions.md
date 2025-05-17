@@ -157,3 +157,14 @@ definePageMeta({
 4. **Styling Issues**
    - Make sure styles are properly scoped or global as needed
    - Check for CSS conflicts with Nuxt's built-in styles
+
+## Formatting Vue Files
+
+When porting Vue files, ensure they follow a consistent formatting standard:
+
+- Use Vue.volar as the default formatter for Vue files
+- Configuration is already set in `.vscode/settings.json`
+- Format each file after porting with:
+   ```bash
+   bun x prettier --write layers/[example-name]/components/[ComponentName].vue
+   ```
