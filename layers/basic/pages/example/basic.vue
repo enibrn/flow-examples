@@ -149,6 +149,6 @@ function toggleDarkMode() {
   </VueFlow>
 </template>
 
-<style scoped>
+<style>
 @import '../../assets/basic-style.css';
 </style>

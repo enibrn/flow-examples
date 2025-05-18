@@ -53,7 +53,17 @@ layers/[example-name]/
    - Example: `basic-style.css`, `layout-initial-elements.js`
 
 2. **Import Path**
-   - Import using relative paths: `import '../assets/basic-style.css'`
+   - For JS/TS assets: Import using relative paths: `import { data } from '../assets/basic-initial-elements.js'`
+   - For CSS: Use scoped style imports instead of direct imports:
+     ```vue
+     <!-- CORRECT -->
+     <style scoped>
+     @import '../../assets/example-style.css';
+     </style>
+
+     <!-- INCORRECT - Will cause build errors -->
+     import '../assets/example-style.css';
+     ```
 
 ## Porting Process
 
@@ -153,6 +163,7 @@ definePageMeta({
 3. **Assets Not Found**
    - Check the import path
    - Make sure the asset is in the correct directory
+   - For CSS files, ensure they are imported in the `<style>` section with `@import`, not as a script import
 
 4. **Styling Issues**
    - Make sure styles are properly scoped or global as needed
