@@ -2,6 +2,8 @@
   setup
   lang="ts"
 >
+import type { RouteRecordNormalized } from 'vue-router';
+
 const drawer = ref(false);
 const router = useRouter();
 
@@ -32,7 +34,10 @@ const formatRouteTitle = (route: RouteRecordNormalized) => {
 
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer
+      v-model="drawer"
+      :width="300"
+    >
       <v-list>
         <v-list-item
           v-for="pageRoute in pageRoutes"
@@ -47,10 +52,14 @@ const formatRouteTitle = (route: RouteRecordNormalized) => {
       <v-app-bar-nav-icon @click="drawer = !drawer" />
 
       <v-app-bar-title>FlowLess</v-app-bar-title>
-      
-      <v-spacer/>
-      
-      <v-btn icon to="/" title="Home">
+
+      <v-spacer />
+
+      <v-btn
+        icon
+        to="/"
+        title="Home"
+      >
         <v-icon>mdi-home</v-icon>
       </v-btn>
     </v-app-bar>
