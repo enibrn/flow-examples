@@ -54,10 +54,10 @@ layers/[example-name]/
 
 2. **Import Path**
    - For JS/TS assets: Import using relative paths: `import { data } from '../assets/basic-initial-elements.js'`
-   - For CSS: Use scoped style imports instead of direct imports:
+   - For CSS: Use style imports instead of direct imports:
      ```vue
      <!-- CORRECT -->
-     <style scoped>
+     <style>
      @import '../../assets/example-style.css';
      </style>
 
