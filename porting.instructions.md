@@ -75,11 +75,9 @@ layers/[example-name]/
 
 ### 2. Create Layer Structure
 
-```bash
-mkdir -p layers/[example-name]/pages/example
-mkdir -p layers/[example-name]/components
-mkdir -p layers/[example-name]/composables
-mkdir -p layers/[example-name]/assets # Only if needed
+```powershell
+# PowerShell command (Windows)
+mkdir -Path "layers/[example-name]/pages/example", "layers/[example-name]/components", "layers/[example-name]/composables", "layers/[example-name]/assets"
 ```
 
 ### 3. Port Components
