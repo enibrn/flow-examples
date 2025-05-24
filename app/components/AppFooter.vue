@@ -1,9 +1,9 @@
 <script setup lang="ts">
   const items = shallowRef([
     {
-      title: 'Flowless GitHub',
+      title: 'GitHub',
       icon: `mdi-github`,
-      href: 'https://github.com/enibrn/flowless',
+      href: 'https://github.com/enibrn/flow-examples',
     }
   ])
 </script>
