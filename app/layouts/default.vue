@@ -51,7 +51,7 @@ const formatRouteTitle = (route: RouteRecordNormalized) => {
     <v-app-bar>
       <v-app-bar-nav-icon @click="drawer = !drawer" />
 
-      <v-app-bar-title>FlowLess</v-app-bar-title>
+      <v-app-bar-title>Flow Examples</v-app-bar-title>
 
       <v-spacer />
 
