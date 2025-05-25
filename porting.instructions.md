@@ -80,7 +80,17 @@ layers/[example-name]/
 mkdir -Path "layers/[example-name]/pages/example", "layers/[example-name]/components", "layers/[example-name]/composables", "layers/[example-name]/assets"
 ```
 
-### 3. Port Components
+### 3. Layer Configuration
+
+Create a simple `nuxt.config.ts` file in the layer root with minimal configuration:
+
+```typescript
+export default defineNuxtConfig({});
+```
+
+**Important:** Do NOT add `extends: ['../..']` or any other configuration. Keep it minimal to avoid conflicts.
+
+### 4. Port Components
 
 1. **Convert to TypeScript**
    - Add `lang="ts"` to script tags
@@ -95,7 +105,7 @@ mkdir -Path "layers/[example-name]/pages/example", "layers/[example-name]/compon
 3. **Update Relative Imports**
    - Update asset imports to use the correct paths
 
-### 4. Test & Validate
+### 5. Test & Validate
 
 - Test the ported example for visual correctness
 - Verify all interactions work as expected
