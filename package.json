@@ -22,6 +22,7 @@
     "@vue-flow/core": "^1.43.1",
     "@vue-flow/minimap": "^1.5.3",
     "@vue-flow/node-resizer": "^1.4.0",
+    "@vue-flow/node-toolbar": "^1.1.1",
     "eslint": "^9.0.0",
     "nuxt": "^3.17.2",
     "vue": "latest",
