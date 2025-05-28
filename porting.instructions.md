@@ -33,8 +33,13 @@ layers/[example-name]/
 
 3. **Page Component**
    - Place in `pages/example/[example-name].vue`
-   - Add page metadata with `definePageMeta()`
+   - **Do NOT add `definePageMeta()`** - keep the component simple
    - Use composition API style with `<script setup lang="ts">`
+
+4. **Structure Fidelity**
+   - **Follow the original example structure exactly** - if the original has only one file, create only one page file
+   - **Do NOT create composables or components** unless they exist in the original example
+   - **Do NOT over-engineer** - keep the same level of complexity as the original
 
 ### Composables
 
@@ -70,8 +75,9 @@ layers/[example-name]/
 ### 1. Analyze Source Files
 
 - Review the original example structure
+- **Count the number of files** - this determines how many files you should create
 - Identify components, utilities, and assets
-- Document component relationships
+- **DO NOT create additional structure** that doesn't exist in the original
 
 ### 2. Create Layer Structure
 
@@ -150,12 +156,21 @@ const edges = ref(initialEdges)
 onConnect((params) => {
   edges.value.push(params)
 })
-
-definePageMeta({
-  title: 'Basic Example',
-  description: 'Vue Flow basic example'
-})
 </script>
+```
+
+### Important: Structure Fidelity Example
+
+**WRONG Approach (Over-engineering):**
+```
+Original: 1 file (App.vue)
+Ported: 3 files (page.vue + composable.ts + component.vue)
+```
+
+**CORRECT Approach (Faithful porting):**
+```
+Original: 1 file (App.vue)
+Ported: 1 file (example-name.vue)
 ```
 
 ## Common Issues
